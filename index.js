@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
             .then((response) => {
                 if (response.ok) {
-                    alert("Data submitted successfully!");
+                    alert("Login successfully!");
                     // Redirect to the specified URL
                     window.location.href = redirectURL;
                 } else {
