@@ -12,9 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault(); // Prevent default form submission
 
         // Collect form data
-const email = document.getElementById("email").value;
+        const email = document.getElementById("email").value;
         const name = document.getElementById("name").value;
-        
+
+        // Create FormData object and append fields
+        const formData = new FormData();
+        formData.append("email", email);
+        formData.append("name", name);
+
         // Send data to Google Apps Script
         fetch(scriptURL, {
             method: "POST",
